@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cdc842;
+  background: #283917;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1481,13 +1481,6 @@ pre .javascript .function {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-}
-body {
-  background: url("/image/bkg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 .back-to-top {
   background: #222;
