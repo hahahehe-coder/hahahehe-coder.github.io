@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>快速跳转到QQ接收文件的文件夹</title>
+      <link href="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+      <url>/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
+      
+        <content type="html"><![CDATA[<p>　　电脑QQ默认的下载文件路径是<code>TencentQQ\QQdata\123456789\FileRecv</code>（123456789是QQ号）。这条路径非常的长，找起来麻烦还不好记。</p><a id="more"></a><p>　　想方便地打开QQ接收文件的文件夹，常见的方法是在QQ的设置里调整接收文件的位置。这次我来介绍一个不怎么常见的方法：使用环境变量。<br>　　首先打开环境变量：</p><blockquote><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE1.png" class title="打开属性"><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE2.png" class title="打开环境变量"></blockquote><p>　　接着把路径复制到下面，名称可以随便起，我这里起的是<code>QQ</code>。越简单越好，毕竟本来就是为了方便。</p><blockquote><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE3.png" class title="新建变量"></blockquote><p>　　退出时别忘了下面的确定：</p><blockquote><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE4.png" class title="确定后退出"></blockquote><p>　　完成后你就可以在任何位置，在路径栏通过输入<code>%QQ%</code>访问你接收QQ文件的文件夹了！</p><blockquote><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE5.png" class title="在路径栏输入变量名"><p>　　回车：</p><img src="/2020/07/18/%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0QQ%E6%8E%A5%E6%94%B6%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%8F%92%E5%9B%BE6.png" class title="成功打开文件夹"></blockquote><p>　　那这种方法与改原本路径相比有什么优势呢？<br>　　额，我觉得最大优势可能就是更帅一点吧。而且在任何路径下都能快速访问好像更加方便一点。<br>　　至于究竟哪种方法好，那就仁者见仁智者见智了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电脑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo博客中插入图片的方法</title>
       <link href="/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p>　　在博客中插入图片的方法网上一查一大把，但有很多都是说在md文件同目录建立一个与md文件同名的文件夹，在md文件中以这样的形式：<code>![title](图片名.jpg)</code>就能插入图片了。</p><a id="more"></a><p>　　然而，不知为何我实验后发现并不能完成插入图片，只能在插入位置显示一个图片标识。这里我给出我找到的一种亲测可行的方法。<br>　　前面的步骤一样，只是在md文件中写的是：</p><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">asset_img</span> 插图.png 图片描述 %&#125;</span></span><br></pre></td></tr></table></figure><p>　　注意替换成自己图片的名字和图片描述。另外，这种方式的图片描述是在鼠标悬浮在图片上空时显现的。如果想让图片描述一直显示在图片下方，要用其他方法。<br>　　以下是一个示范：</p><blockquote><img src="/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/%E6%8F%92%E5%9B%BE1.png" class title="这是md文件中写的"></blockquote><blockquote><img src="/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/%E6%8F%92%E5%9B%BE2.png" class title="这是博客上显示出来的效果"></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>　　在博客中插入图片的方法网上一查一大把，但有很多都是说在md文件中以这样的形式：<code>![title](图片名.jpg)</code>就能插入图片了。</p><a id="more"></a><p>　　下面是我学习的文章中对插入图片的描述。<a href="https://blog.csdn.net/weixin_39345384/article/details/80785373" target="_blank" rel="noopener">原文链接</a></p><blockquote><img src="/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/%E6%8F%92%E5%9B%BE3.png" class title="图片描述"></blockquote><p>　　然而，不知为何我实验后发现并不能完成插入图片，只能在插入位置显示一个图片标识。这里我给出我找到的一种亲测可行的方法。<br>　　前面的步骤一样，只是在md文件中写的是：</p><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">asset_img</span> 插图.png 图片描述 %&#125;</span></span><br></pre></td></tr></table></figure><p>　　注意替换成自己图片的名字和图片描述。另外，这种方式的图片描述是在鼠标悬浮在图片上空时显现的。如果想让图片描述一直显示在图片下方，要用其他方法。<br>　　以下是一个示范：<br>　　这是md文件中写的：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　折腾了半天，在stackoverflow论坛里找到了一个解决办法。先打开`控制面板-&gt;程序-&gt;卸载或更改程序`把<span class="keyword">node</span><span class="title">卸载，然后找到以下路径：`C</span>:\Users\<span class="number">86183</span>\AppData\Roaming`中的npm和npm-cache文件夹并删除。注意，<span class="number">86183</span>是用户名。</span><br><span class="line">&gt;&#123;% asset_img 插图<span class="number">1</span>.png 删除这两个文件夹 %&#125;</span><br><span class="line">　　然后重装<span class="keyword">node</span><span class="title">就可以了。</span></span><br></pre></td></tr></table></figure><p>　　这是博客上显示出来的效果：</p><blockquote><img src="/2020/07/18/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/%E6%8F%92%E5%9B%BE2.png" class title="这是博客上显示出来的效果"></blockquote><p>　　这个<code>&gt;</code>是引用的意思，也就是在内容前加一条竖线。</p>]]></content>
       
       
       <categories>
