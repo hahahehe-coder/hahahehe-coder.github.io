@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>用hexo + node.js建立博客时使用npm指令提示模块缺少的处理办法</title>
+      <link href="/2020/07/18/%E5%BB%BA%E7%AB%8B%E6%97%B6%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
+      <url>/2020/07/18/%E5%BB%BA%E7%AB%8B%E6%97%B6%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>　　之前帮助同学建站，在使用npm指令时提示缺少module，下面一长串的缺少node中的js脚本。我找到他的node目录，发现显示缺少的这些js脚本其实存在着，这让我很疑惑。</p><a id="more"></a><p>　　折腾了半天，在stackoverflow论坛里找到了一个解决办法。先打开<code>控制面板-&gt;程序-&gt;卸载或更改程序</code>把node卸载，然后找到以下路径：<code>C:\Users\86183\AppData\Roaming</code>中的npm和npm-cache文件夹并删除。</p><blockquote><img src="/2020/07/18/%E5%BB%BA%E7%AB%8B%E6%97%B6%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/%E6%8F%92%E5%9B%BE1.png" class title="删除这两个文件夹"><p>　　然后重装node就可以了。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>本地预览没问题但上传github页面没变化</title>
       <link href="/2020/07/16/%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E6%B2%A1%E9%97%AE%E9%A2%98%E4%BD%86%E4%B8%8A%E4%BC%A0github%E9%A1%B5%E9%9D%A2%E6%B2%A1%E5%8F%98%E5%8C%96/"/>
       <url>/2020/07/16/%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E6%B2%A1%E9%97%AE%E9%A2%98%E4%BD%86%E4%B8%8A%E4%BC%A0github%E9%A1%B5%E9%9D%A2%E6%B2%A1%E5%8F%98%E5%8C%96/</url>
