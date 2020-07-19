@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言　　MFC的初学者常常会有这样的问题：为什么我的子对话框控制不了父对话框？我一看他们写的代码，有的是在创建子对话框时创建的是模态对话框，有的竟然在子对话框中新建一个父对话框对象！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-19T06:02:05.000Z">
-<meta property="article:modified_time" content="2020-07-19T06:58:27.517Z">
+<meta property="article:modified_time" content="2020-07-19T07:01:50.421Z">
 <meta property="article:author" content="Li">
 <meta property="article:tag" content="MFC">
 <meta property="article:tag" content="C++">
@@ -217,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-19 14:02:05 / 修改时间：14:58:27" itemprop="dateCreated datePublished" datetime="2020-07-19T14:02:05+08:00">2020-07-19</time>
+              <time title="创建时间：2020-07-19 14:02:05 / 修改时间：15:01:50" itemprop="dateCreated datePublished" datetime="2020-07-19T14:02:05+08:00">2020-07-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -266,7 +266,7 @@
 <p>　　种种操作看的我非常无语，现在我就简单介绍一下方法吧。假设父对话框类为CParentDlg，子对话框类为CChildDlg。</p>
 <h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><h4 id="在父对话框类中创建非模态对话框"><a href="#在父对话框类中创建非模态对话框" class="headerlink" title="在父对话框类中创建非模态对话框"></a>在父对话框类中创建非模态对话框</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	void <span class="function"><span class="keyword">func</span><span class="params">()</span></span>;	<span class="comment">//假设你在这个函数里新建子对话框</span></span><br></pre></td></tr></table></figure>
 <p>　　函数的定义：</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void CParentDlg::func<span class="literal">()</span></span><br><span class="line">&#123;</span><br><span class="line">	m_pCDlg = <span class="keyword">new</span> <span class="constructor">CChildDlg(<span class="params">this</span>)</span>;<span class="comment">//构造函数的默认参数是它的父对话框，所以传个this进去</span></span><br><span class="line">	m_pCDlg-&gt;<span class="constructor">Create(IDD_DIALOG1)</span>;<span class="comment">//Create的参数填子对话框资源的ID</span></span><br><span class="line">	m_pCDlg-&gt;<span class="constructor">ShowWindow(SW_SHOWNORMAL)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void CParentDlg::func<span class="literal">()</span></span><br><span class="line">&#123;</span><br><span class="line">	CChildDlg* m_pCDlg = <span class="keyword">new</span> <span class="constructor">CChildDlg(<span class="params">this</span>)</span>;<span class="comment">//构造函数的默认参数是它的父对话框，所以传个this进去</span></span><br><span class="line">	m_pCDlg-&gt;<span class="constructor">Create(IDD_DIALOG1)</span>;<span class="comment">//Create的参数填子对话框资源的ID</span></span><br><span class="line">	m_pCDlg-&gt;<span class="constructor">ShowWindow(SW_SHOWNORMAL)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="在子对话框类中获取父对话框指针"><a href="#在子对话框类中获取父对话框指针" class="headerlink" title="在子对话框类中获取父对话框指针"></a>在子对话框类中获取父对话框指针</h4><p>　　头文件啥的不用多说吧，我就写重点了。</p>
 <p>　　在子对话框类中定义一个父对话框类指针：</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	CParentDlg* m_pPDlg;	<span class="comment">//用来指向父对话框</span></span><br></pre></td></tr></table></figure>
